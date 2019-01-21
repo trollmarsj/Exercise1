@@ -20,16 +20,19 @@ When answering the questions, remember to use all the resources at your disposal
  > *Your answer here*
 
  ### What are the differences between processes, threads, green threads, and coroutines?
- > *Your answer here*
+ > processes: OS-managed concurrent, exist within their own address space.
+ threads: OS-managed, a form of concurrent processing.
+ green threads: user-space projections of the same concept as threads, but not OS-managed.
+ coroutines: a form of sequential processing.
 
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
- > *Your answer here*
+ > They all create threads.
 
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
- > *Your answer here*
+ > GIL is a mutex, that prevents multiple threads from executing phthon bytecodes at once. So only one thread can be in a state of execution.
 
  ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
- > *Your answer here*
+ > By using the multiprocessing module. It creates another process.
 
  ### What does `func GOMAXPROCS(n int) int` change?
- > *Your answer here*
+ > It sets the maximum number of CPUs that can be executing simultaneously.
